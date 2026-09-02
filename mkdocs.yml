@@ -1,0 +1,30 @@
+site_name: Bot Integration Documentation
+site_description: Setup guides for connecting the bot to Discord and Slack.
+site_url: https://llm-tutors-for-all.github.io/discord/
+repo_url: https://github.com/LLM-Tutors-For-All/discord
+repo_name: LLM-Tutors-For-All/discord
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+
+nav:
+  - Home: index.md
+  - Platform setup:
+      - Discord: discord.md
+      - Slack: slack.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+
+strict: true
