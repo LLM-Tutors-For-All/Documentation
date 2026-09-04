@@ -1,11 +1,6 @@
-# Bot integration documentation
+<meta http-equiv="refresh" content="0; url=home/">
+<link rel="canonical" href="home/">
 
-Use these guides to connect the bot to your preferred chat platform.
+# Redirecting
 
-## Available platforms
-
-- [Discord](discord.md): create a Discord application, configure permissions, and invite the bot to a server.
-- [Slack](slack.md): create a Slack app, configure Socket Mode, and install the bot in a workspace.
-
-!!! warning "Keep tokens private"
-    Never commit bot tokens or your `.env` file. If a token is exposed, rotate it immediately in the platform's developer console.
+[Continue to the homepage](home.md).

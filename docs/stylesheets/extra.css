@@ -1,0 +1,39 @@
+.project-hero,
+.project-details {
+  border-radius: 0.8rem;
+  padding: clamp(2rem, 5vw, 3.5rem);
+}
+
+.project-hero {
+  margin: 1rem 0 1.5rem;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--md-primary-fg-color) 18%, var(--md-default-bg-color)),
+    color-mix(in srgb, var(--md-accent-fg-color) 10%, var(--md-default-bg-color))
+  );
+}
+
+.project-hero h1 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(2.3rem, 6vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.project-hero > p:not(:last-child) {
+  max-width: 42rem;
+  font-size: 1.05rem;
+}
+
+.project-hero .md-button {
+  margin-top: 0.5rem;
+  margin-right: 0.4rem;
+}
+
+.project-details {
+  background: var(--md-code-bg-color);
+}
+
+.project-details h2:first-child {
+  margin-top: 0;
+}
