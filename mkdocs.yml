@@ -29,10 +29,15 @@ theme:
 
 nav:
   - Home: home.md
-  - Chat Integrations:
-      - Overview: integrations.md
+  - Getting Started: getting-started.md
+  - Tutor Options:
+      - Local CLI: local-tutor.md
       - Discord: discord.md
       - Slack: slack.md
+  - Framework Options:
+      - Overview: framework-options.md
+      - GPT Corpus: gpt-corpus.md
+      - OpenAI Brain: openai-brain.md
   - Benchmark: benchmark.md
 
 plugins:
@@ -42,6 +47,8 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true
 
