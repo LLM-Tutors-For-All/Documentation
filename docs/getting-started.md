@@ -1,7 +1,7 @@
-# Getting Started
+# Data 8 Bot: Getting Started
 
-This guide runs the Data 8 tutor locally. Complete it before starting the
-Discord or Slack integrations.
+This guide prepares and runs the current Data 8 tutor. Complete it before
+starting the local, Discord, or Slack tutor option.
 
 ![Course files are indexed locally, retrieved for a question, and sent to the tutoring engine before reaching each interface.](assets/tutor-flow.svg)
 

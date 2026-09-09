@@ -29,15 +29,21 @@ theme:
 
 nav:
   - Home: home.md
-  - Getting Started: getting-started.md
+  - How to Use Our Bots:
+      - Overview: using-bots.md
+      - Current Bots:
+          - Data 8:
+              - Getting Started: getting-started.md
   - Tutor Options:
+      - Overview: options.md
       - Local CLI: local-tutor.md
       - Discord: discord.md
       - Slack: slack.md
-  - Framework Options:
-      - Overview: framework-options.md
-      - GPT Corpus: gpt-corpus.md
-      - OpenAI Brain: openai-brain.md
+  - Model Options:
+      - Overview: model-options.md
+      - Data 8:
+          - GPT Corpus: corpus-options.md
+          - OpenAI Brain: openai-options.md
   - Benchmark: benchmark.md
 
 plugins:

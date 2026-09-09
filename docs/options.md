@@ -26,5 +26,5 @@ Slack workspace using Socket Mode.
 
 [Set up Slack](slack.md)
 
-All three tutor options currently use the same
-[GPT corpus](gpt-corpus.md) and [OpenAI brain](openai-brain.md).
+All three tutor options currently use the same Data 8 course corpus and
+OpenAI-compatible brain.
