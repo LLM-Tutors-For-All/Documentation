@@ -5,29 +5,54 @@ This project uses [MkDocs](https://www.mkdocs.org/) with the
 
 ## Run locally
 
-Python 3 must be installed and available from PowerShell.
+Install [Python 3](https://www.python.org/downloads/) first. On Windows, run
+these commands in PowerShell. On macOS, run them in Terminal.
 
 1. Create a virtual environment:
+
+   **Windows**
 
    ```powershell
    py -m venv .venv
    ```
 
+   **macOS**
+
+   ```bash
+   python3 -m venv .venv
+   ```
+
 2. Activate it:
+
+   **Windows**
 
    ```powershell
    .\.venv\Scripts\Activate.ps1
    ```
 
+   **macOS**
+
+   ```bash
+   source .venv/bin/activate
+   ```
+
 3. Install the dependencies:
+
+   **Windows**
 
    ```powershell
    py -m pip install -r requirements.txt
    ```
 
+   **macOS**
+
+   ```bash
+   python3 -m pip install -r requirements.txt
+   ```
+
 4. Start the development server:
 
-   ```powershell
+   ```console
    mkdocs serve
    ```
 
@@ -40,7 +65,7 @@ MkDocs automatically reloads the site when files under `docs/` or
 
 Generate the static website in the `site/` directory:
 
-```powershell
+```console
 mkdocs build --strict
 ```
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-labelledby="title desc">
+  <title id="title">Profile picture placeholder</title>
+  <desc id="desc">A generic person silhouette in Berkeley blue and California gold.</desc>
+  <rect width="480" height="480" fill="#002676"/>
+  <circle cx="240" cy="174" r="78" fill="#FDB515"/>
+  <path d="M92 432c10-105 67-166 148-166s138 61 148 166z" fill="#FDB515"/>
+  <rect x="24" y="24" width="432" height="432" fill="none" stroke="#9FD1FF" stroke-width="8"/>
+</svg>

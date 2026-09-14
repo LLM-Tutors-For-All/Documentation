@@ -6,6 +6,9 @@ repo_name: LLM-Tutors-For-All/Documentation
 
 theme:
   name: material
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
   icon:
     logo: material/robot
   palette:
@@ -45,6 +48,7 @@ nav:
           - GPT Corpus: corpus-options.md
           - OpenAI Brain: openai-options.md
   - Benchmark: benchmark.md
+  - Contact: contact.md
 
 plugins:
   - search

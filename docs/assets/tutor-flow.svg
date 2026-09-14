@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
   <title id="title">LLM tutor request flow</title>
-  <desc id="desc">Course files are indexed locally, relevant context is retrieved for a question, OpenAI generates a grounded response, and the answer reaches the local CLI, Discord, or Slack.</desc>
+  <desc id="desc">Course files are indexed locally, retrieved for a question, and sent to the tutoring engine before reaching each interface.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1">
       <stop offset="0" stop-color="#4051b5"/>
@@ -11,18 +12,18 @@
     </marker>
   </defs>
   <rect width="960" height="280" rx="22" fill="#f8fafc"/>
-  <text x="48" y="48" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#172033">How the tutor answers</text>
-  <g font-family="system-ui, sans-serif" text-anchor="middle">
+  <text x="48" y="48" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#172033">How the tutor answers</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
     <g transform="translate(45 90)">
       <rect width="170" height="105" rx="14" fill="url(#bg)"/>
       <text x="85" y="45" font-size="17" font-weight="700" fill="white">Data 8 corpus</text>
-      <text x="85" y="70" font-size="13" fill="#eef2ff">Lectures · assignments</text>
+      <text x="85" y="70" font-size="13" fill="#eef2ff">Lectures - assignments</text>
     </g>
     <path d="M225 142 H292" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
     <g transform="translate(305 90)">
       <rect width="170" height="105" rx="14" fill="#e0e7ff" stroke="#a5b4fc"/>
       <text x="85" y="43" font-size="17" font-weight="700" fill="#24305e">Local retrieval</text>
-      <text x="85" y="69" font-size="13" fill="#475569">BM25 · embeddings</text>
+      <text x="85" y="69" font-size="13" fill="#475569">BM25 - embeddings</text>
     </g>
     <path d="M485 142 H552" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
     <g transform="translate(565 90)">

@@ -11,7 +11,8 @@ hide:
 
 An applied research and discovery project exploring practical ways to deploy
 LLM-powered tutors, with a focus on performance and cost tradeoffs across
-services.
+services. We are developing reproducible benchmark harnesses to test tutor
+models under consistent conditions.
 
 [Explore tutor options](options.md){ .md-button .md-button--primary }
 [View benchmarks](benchmark.md){ .md-button }
@@ -49,18 +50,8 @@ corpora and model brains can be added without restructuring the site.
 
 Benchmark work will compare only options that have been implemented, rather
 than assume that one approach is universally best. Results will include the
-methodology and measured data as experiments are completed.
-
-## Project contributors
-
-<div class="contributors" markdown>
-
-- **Benjamin Telanoff**
-- **Edwin Vargas Navarro**
-- **Silas Santini**
-
-</div>
-
-[View the project source and contributors](https://github.com/LLM-Tutors-For-All/LLM-Tutors-For-All)
+methodology, harness configuration, test questions, and measured data as
+experiments are completed. This makes model comparisons repeatable instead of
+depending on isolated demonstrations or impressions.
 
 </section>
