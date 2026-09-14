@@ -204,6 +204,15 @@
   background: #f8fafc;
 }
 
+.md-content .course-logo-large,
+.md-content .interface-logo-large {
+  display: block;
+  width: min(12rem, 55%);
+  margin: 1.5rem 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: #ffffff;
+}
+
 .md-typeset .admonition,
 .md-typeset details {
   border-radius: 0;
@@ -211,6 +220,155 @@
 
 .md-typeset code {
   border-radius: 0.15rem;
+}
+
+.option-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1.4rem;
+  margin: 1.75rem 0 2rem;
+}
+
+.option-gallery--courses {
+  grid-template-columns: minmax(16rem, 32rem);
+}
+
+.option-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--md-default-fg-color) !important;
+  text-decoration: none;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-bottom: 0.3rem solid var(--lab-ink);
+  background: var(--md-code-bg-color);
+  box-shadow: 0.35rem 0.35rem 0 color-mix(in srgb, var(--lab-ink) 12%, transparent);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.option-card:hover,
+.option-card:focus-visible {
+  color: var(--md-default-fg-color) !important;
+  border-bottom-color: var(--lab-signal);
+  box-shadow: 0.55rem 0.55rem 0 color-mix(in srgb, var(--lab-signal) 70%, transparent);
+  transform: translate(-0.2rem, -0.2rem);
+}
+
+.option-card:focus-visible {
+  outline: 0.15rem solid var(--md-accent-fg-color);
+  outline-offset: 0.2rem;
+}
+
+.option-card__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 12 / 7;
+  background: var(--lab-ink);
+}
+
+.md-content .option-card__media img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0;
+  transition: transform 300ms ease;
+}
+
+.option-card:hover .option-card__media img {
+  transform: scale(1.025);
+}
+
+.option-card__media > span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.35rem 0.65rem;
+  color: var(--lab-ink);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--lab-signal);
+}
+
+.option-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.1rem 1.2rem 1.25rem;
+}
+
+.option-card__body h3 {
+  margin: 0.15rem 0 0.55rem;
+  color: var(--md-default-fg-color);
+  font-size: 1.25rem;
+}
+
+.option-card__body p {
+  margin: 0 0 1rem;
+  line-height: 1.55;
+}
+
+.option-card__body strong {
+  margin-top: auto;
+  color: var(--md-accent-fg-color);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.option-card__eyebrow {
+  color: var(--md-default-fg-color--light) !important;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.option-card--compact .option-card__body {
+  padding: 1.2rem;
+}
+
+.option-card--compact .option-card__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-content .option-card--compact .option-card__logo {
+  width: 3.1rem;
+  height: 3.1rem;
+  flex: 0 0 3.1rem;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.md-content .option-card--compact .option-card__logo[src$="slack.png"] {
+  padding: 0.35rem;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.option-card--compact .option-card__heading h3 {
+  margin: 0;
+  color: var(--md-accent-fg-color);
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.option-card--compact .option-card__body > p {
+  margin: 1rem 0 0;
+  color: var(--md-default-fg-color--light);
 }
 
 @media screen and (max-width: 44.9844em) {

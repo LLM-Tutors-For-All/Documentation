@@ -73,6 +73,14 @@ tutor is ready.
 
 ## Use it in Discord
 
+### Mention the tutor
+
+![A student mentioning the Data 8 tutor in Discord and receiving an answer.](assets/gallery/discord_@_command.png)
+
+### Use the slash command
+
+![The Data 8 tutor answering a Discord slash command.](assets/gallery/discord_slash_command.png)
+
 - Mention it: `@Data 8 Tutor how do I use tbl.where?`
 - Send the bot a direct message.
 - Run `/tutor question: how do I use tbl.where?`

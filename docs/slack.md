@@ -78,6 +78,8 @@ Leave the process running. You should see `Slack tutor starting (Socket Mode)`.
 
 ## Use it in Slack
 
+![A student mentioning the Data 8 tutor in Slack and receiving an answer.](assets/gallery/slack_demo.png)
+
 - Mention it: `@Data 8 Tutor how do I use tbl.where?`
 - Send the app a direct message.
 - Run `/tutor how do I use tbl.where?`

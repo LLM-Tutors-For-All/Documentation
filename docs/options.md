@@ -5,26 +5,39 @@ interface uses the same course corpus, retrieval system, and tutoring engine.
 
 ## Choose an interface
 
-### Local CLI
+<div class="option-gallery">
 
-Run one-shot questions or an interactive chat directly in a terminal. This is
-the simplest option for development, retrieval testing, and staff-mode access.
+<a class="option-card option-card--compact" href="../local-tutor/">
+  <div class="option-card__body">
+    <div class="option-card__heading">
+      <img class="option-card__logo" src="../assets/gallery/cli.png" alt="">
+      <h3>Local CLI</h3>
+    </div>
+    <p>Run one-shot questions, interactive chat, retrieval checks, and staff mode.</p>
+  </div>
+</a>
 
-[Set up the local tutor](local-tutor.md)
+<a class="option-card option-card--compact" href="../discord/">
+  <div class="option-card__body">
+    <div class="option-card__heading">
+      <img class="option-card__logo" src="../assets/gallery/discord.png" alt="">
+      <h3>Discord</h3>
+    </div>
+    <p>Let students ask through mentions, direct messages, or the tutor command.</p>
+  </div>
+</a>
 
-### Discord
+<a class="option-card option-card--compact" href="../slack/">
+  <div class="option-card__body">
+    <div class="option-card__heading">
+      <img class="option-card__logo" src="../assets/gallery/slack.png" alt="">
+      <h3>Slack</h3>
+    </div>
+    <p>Use mentions, direct messages, or the tutor command through Socket Mode.</p>
+  </div>
+</a>
 
-Let students ask questions through mentions, direct messages, or the `/tutor`
-slash command in a Discord server.
-
-[Set up Discord](discord.md)
-
-### Slack
-
-Let students ask questions through mentions, direct messages, or `/tutor` in a
-Slack workspace using Socket Mode.
-
-[Set up Slack](slack.md)
+</div>
 
 All three tutor options currently use the same Data 8 course corpus and
 OpenAI-compatible brain.

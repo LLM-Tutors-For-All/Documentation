@@ -9,10 +9,19 @@ configure its required services, start it, and verify that it is working.
 
 ## Current bots
 
-### Data 8
+<div class="option-gallery option-gallery--courses">
 
-The Data 8 bot is grounded in UC Berkeley Data 8 Spring 2026 course material.
-Its getting-started guide covers the local environment, API configuration,
-course index, and first test question.
+<a class="option-card option-card--compact" href="../getting-started/">
+  <div class="option-card__body">
+    <div class="option-card__heading">
+      <img class="option-card__logo" src="../assets/gallery/data8.jpg" alt="">
+      <h3>Data 8</h3>
+    </div>
+    <p>Set up a tutor grounded in UC Berkeley Data 8 Spring 2026 course material.</p>
+  </div>
+</a>
 
-[Get started with the Data 8 bot](getting-started.md){ .md-button .md-button--primary }
+</div>
+
+New course bots can be added to this gallery with their own setup guides,
+corpora, and service requirements.

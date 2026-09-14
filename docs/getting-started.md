@@ -3,6 +3,15 @@
 This guide prepares and runs the current Data 8 tutor. Complete it before
 starting the local, Discord, or Slack tutor option.
 
+## Current course
+
+![Data 8 course logo.](assets/gallery/data8.jpg){ .course-logo-large }
+
+The tutor is grounded in UC Berkeley Data 8 Spring 2026 lectures, assignments,
+textbook material, worksheets, and exams.
+
+## How it works
+
 ![Course files are indexed locally, retrieved for a question, and sent to the tutoring engine before reaching each interface.](assets/tutor-flow.svg)
 
 ## Requirements

@@ -39,9 +39,10 @@ nav:
               - Getting Started: getting-started.md
   - Tutor Options:
       - Overview: options.md
-      - Local CLI: local-tutor.md
-      - Discord: discord.md
-      - Slack: slack.md
+      - Interfaces:
+          - Local CLI: local-tutor.md
+          - Discord: discord.md
+          - Slack: slack.md
   - Model Options:
       - Overview: model-options.md
       - Data 8:

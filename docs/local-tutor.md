@@ -3,7 +3,9 @@
 The command-line interface is the fastest way to test the tutor without
 configuring a chat platform. First complete [Getting Started](getting-started.md).
 
-## One question
+## Use it in the local CLI
+
+### One question
 
 ```bash
 python -m tutor ask "How do I use tbl.where?"
@@ -12,7 +14,7 @@ python -m tutor ask "How do I use tbl.where?"
 The command retrieves relevant course chunks, generates one response, lists its
 source files, and exits.
 
-## Interactive chat
+### Interactive chat
 
 ```bash
 python -m tutor chat
@@ -21,7 +23,7 @@ python -m tutor chat
 The chat remembers recent turns so you can ask follow-up questions. Enter
 `/quit` to exit.
 
-## Inspect retrieval
+### Inspect retrieval
 
 Use `retrieve` to see which course chunks match a question without calling the
 LLM:
@@ -36,7 +38,7 @@ Change the number of returned chunks with `-k`:
 python -m tutor retrieve "What is bootstrapping?" -k 5
 ```
 
-## Staff mode
+### Staff mode
 
 Authorized course staff can include solution materials:
 
