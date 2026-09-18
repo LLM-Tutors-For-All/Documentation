@@ -14,7 +14,7 @@ LLM-powered tutors, with a focus on performance and cost tradeoffs across
 services. We are developing reproducible benchmark harnesses to test tutor
 models under consistent conditions.
 
-[Explore tutor options](options.md){ .md-button .md-button--primary }
+[Explore tutor options](tutor-options/index.md){ .md-button .md-button--primary }
 [View benchmarks](benchmark.md){ .md-button }
 
 </section>

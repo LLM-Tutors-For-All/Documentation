@@ -7,7 +7,7 @@ interface uses the same course corpus, retrieval system, and tutoring engine.
 
 <div class="option-gallery">
 
-<a class="option-card option-card--compact" href="../local-tutor/">
+<a class="option-card option-card--compact" href="interfaces/local-cli/">
   <div class="option-card__body">
     <div class="option-card__heading">
       <img class="option-card__logo" src="../assets/gallery/cli.png" alt="">
@@ -17,7 +17,7 @@ interface uses the same course corpus, retrieval system, and tutoring engine.
   </div>
 </a>
 
-<a class="option-card option-card--compact" href="../discord/">
+<a class="option-card option-card--compact" href="interfaces/discord/">
   <div class="option-card__body">
     <div class="option-card__heading">
       <img class="option-card__logo" src="../assets/gallery/discord.png" alt="">
@@ -27,7 +27,7 @@ interface uses the same course corpus, retrieval system, and tutoring engine.
   </div>
 </a>
 
-<a class="option-card option-card--compact" href="../slack/">
+<a class="option-card option-card--compact" href="interfaces/slack/">
   <div class="option-card__body">
     <div class="option-card__heading">
       <img class="option-card__logo" src="../assets/gallery/slack.png" alt="">

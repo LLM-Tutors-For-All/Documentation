@@ -2,14 +2,50 @@
 
 The Slack tutor responds to mentions, direct messages, and the `/tutor` slash
 command. It uses Socket Mode, so you do not need a public HTTPS endpoint.
-Complete [Getting Started](getting-started.md) first.
+Complete
+[Data 8 Getting Started](../../how-to-use-our-bots/data8/getting-started.md)
+first.
 
-![Slack setup moves from creating an app to enabling Socket Mode, installing it, subscribing to events, and running the tutor.](assets/slack/setup-flow.svg)
+<div class="outline-grid" markdown>
+
+<div class="outline-card" markdown>
+:material-application-outline:{ .outline-card__icon }
+
+### Create the app
+
+Register a Slack app in the workspace where learners will use the tutor.
+</div>
+
+<div class="outline-card" markdown>
+:material-power-plug-outline:{ .outline-card__icon }
+
+### Connect securely
+
+Enable Socket Mode and keep the app-level and bot tokens in `.env`.
+</div>
+
+<div class="outline-card" markdown>
+:material-message-cog-outline:{ .outline-card__icon }
+
+### Configure messages
+
+Add the required scopes, event subscriptions, direct messages, and `/tutor`.
+</div>
+
+<div class="outline-card" markdown>
+:material-robot:{ .outline-card__icon }
+
+### Start tutoring
+
+Run the local process and invite the tutor into the appropriate channels.
+</div>
+
+</div>
 
 ## 1. Create the app
 
 1. Open [Slack API Apps](https://api.slack.com/apps).
-2. Select **Create New App → From scratch**.
+2. Select **Create New App -> From scratch**.
 3. Name the app, for example `Data 8 Tutor`, and select a workspace.
 
 ## 2. Enable Socket Mode
@@ -53,7 +89,7 @@ Complete [Getting Started](getting-started.md) first.
 
 ## 5. Add the slash command and messages tab
 
-1. Open **Slash Commands → Create New Command**.
+1. Open **Slash Commands -> Create New Command**.
 2. Set the command to `/tutor`, the description to `Ask the Data 8 tutor`, and
    the usage hint to `your question`.
 3. Open **App Home**. Under **Show Tabs**, enable **Allow users to send Slash
@@ -78,7 +114,7 @@ Leave the process running. You should see `Slack tutor starting (Socket Mode)`.
 
 ## Use it in Slack
 
-![A student mentioning the Data 8 tutor in Slack and receiving an answer.](assets/gallery/slack_demo.png)
+![A student mentioning the Data 8 tutor in Slack and receiving an answer.](../../assets/gallery/slack_demo.png)
 
 - Mention it: `@Data 8 Tutor how do I use tbl.where?`
 - Send the app a direct message.

@@ -5,14 +5,51 @@ starting the local, Discord, or Slack tutor option.
 
 ## Current course
 
-![Data 8 course logo.](assets/gallery/data8.jpg){ .course-logo-large }
+![Data 8 course logo.](../../assets/gallery/data8.jpg){ .course-logo-large }
 
 The tutor is grounded in UC Berkeley Data 8 Spring 2026 lectures, assignments,
 textbook material, worksheets, and exams.
 
 ## How it works
 
-![Course files are indexed locally, retrieved for a question, and sent to the tutoring engine before reaching each interface.](assets/tutor-flow.svg)
+<div class="outline-grid" markdown>
+
+<div class="outline-card" markdown>
+:material-bookshelf:{ .outline-card__icon }
+
+### Course corpus
+
+Data 8 lectures, assignments, and references provide the tutor's grounded
+knowledge.
+</div>
+
+<div class="outline-card" markdown>
+:material-database-search:{ .outline-card__icon }
+
+### Local retrieval
+
+BM25, with optional embeddings, selects course passages related to each
+question.
+</div>
+
+<div class="outline-card" markdown>
+:material-brain:{ .outline-card__icon }
+
+### Tutor brain
+
+The OpenAI-compatible model uses retrieved context to construct a focused
+answer.
+</div>
+
+<div class="outline-card" markdown>
+:material-message-processing-outline:{ .outline-card__icon }
+
+### Tutor interfaces
+
+The same response engine supports the local CLI, Discord, and Slack bodies.
+</div>
+
+</div>
 
 ## Requirements
 
@@ -89,5 +126,7 @@ Then ask a generated question:
 python -m tutor ask "I'm stuck on using tbl.where"
 ```
 
-Continue with the [local interactive tutor](local-tutor.md), the
-[Discord integration](discord.md), or the [Slack integration](slack.md).
+Continue with the
+[local interactive tutor](../../tutor-options/interfaces/local-cli.md), the
+[Discord integration](../../tutor-options/interfaces/discord.md), or the
+[Slack integration](../../tutor-options/interfaces/slack.md).

@@ -33,21 +33,21 @@ theme:
 nav:
   - Home: home.md
   - How to Use Our Bots:
-      - Overview: using-bots.md
+      - Overview: how-to-use-our-bots/index.md
       - Current Bots:
           - Data 8:
-              - Getting Started: getting-started.md
+              - Getting Started: how-to-use-our-bots/data8/getting-started.md
   - Tutor Options:
-      - Overview: options.md
+      - Overview: tutor-options/index.md
       - Interfaces:
-          - Local CLI: local-tutor.md
-          - Discord: discord.md
-          - Slack: slack.md
+          - Local CLI: tutor-options/interfaces/local-cli.md
+          - Discord: tutor-options/interfaces/discord.md
+          - Slack: tutor-options/interfaces/slack.md
   - Model Options:
-      - Overview: model-options.md
+      - Overview: model-options/index.md
       - Data 8:
-          - GPT Corpus: corpus-options.md
-          - OpenAI Brain: openai-options.md
+          - GPT Corpus: model-options/data8/corpus-options.md
+          - OpenAI Brain: model-options/data8/openai-options.md
   - Benchmark: benchmark.md
   - Contact: contact.md
 
@@ -58,6 +58,9 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true
   - toc:

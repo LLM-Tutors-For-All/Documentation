@@ -1,9 +1,45 @@
 # Discord setup
 
 The Discord tutor responds to mentions, direct messages, and the `/tutor`
-slash command. Complete [Getting Started](getting-started.md) first.
+slash command. Complete
+[Data 8 Getting Started](../../how-to-use-our-bots/data8/getting-started.md)
+first.
 
-![Discord setup moves from creating an application to configuring the bot, authorizing it, and running the tutor.](assets/discord/setup-flow.svg)
+<div class="outline-grid" markdown>
+
+<div class="outline-card" markdown>
+:material-application-outline:{ .outline-card__icon }
+
+### Create the app
+
+Register a Discord application and create the tutor's bot identity.
+</div>
+
+<div class="outline-card" markdown>
+:material-shield-key-outline:{ .outline-card__icon }
+
+### Configure access
+
+Store the bot token privately and enable only the required message intent.
+</div>
+
+<div class="outline-card" markdown>
+:material-link-variant:{ .outline-card__icon }
+
+### Install the bot
+
+Generate an OAuth link with the command scopes and server permissions it needs.
+</div>
+
+<div class="outline-card" markdown>
+:material-robot:{ .outline-card__icon }
+
+### Start tutoring
+
+Run the local process, then use mentions, direct messages, or `/tutor`.
+</div>
+
+</div>
 
 ## 1. Create the application
 
@@ -33,7 +69,7 @@ Leave the Presence and Server Members intents disabled.
 
 ## 3. Install the bot
 
-1. Open **OAuth2 → URL Generator**.
+1. Open **OAuth2 -> URL Generator**.
 2. Enable these scopes:
     - `bot`
     - `applications.commands`
@@ -52,7 +88,7 @@ Leave the Presence and Server Members intents disabled.
 Without a guild ID, Discord may take up to an hour to publish the global slash
 command. For immediate development sync:
 
-1. Enable **Developer Mode** under Discord **User Settings → Advanced**.
+1. Enable **Developer Mode** under Discord **User Settings -> Advanced**.
 2. Right-click the server name and select **Copy Server ID**.
 3. Add it to `.env`:
 
@@ -75,11 +111,11 @@ tutor is ready.
 
 ### Mention the tutor
 
-![A student mentioning the Data 8 tutor in Discord and receiving an answer.](assets/gallery/discord_@_command.png)
+![A student mentioning the Data 8 tutor in Discord and receiving an answer.](../../assets/gallery/discord_@_command.png)
 
 ### Use the slash command
 
-![The Data 8 tutor answering a Discord slash command.](assets/gallery/discord_slash_command.png)
+![The Data 8 tutor answering a Discord slash command.](../../assets/gallery/discord_slash_command.png)
 
 - Mention it: `@Data 8 Tutor how do I use tbl.where?`
 - Send the bot a direct message.

@@ -1,7 +1,8 @@
 # Local CLI Tutor
 
 The command-line interface is the fastest way to test the tutor without
-configuring a chat platform. First complete [Getting Started](getting-started.md).
+configuring a chat platform. First complete
+[Data 8 Getting Started](../../how-to-use-our-bots/data8/getting-started.md).
 
 ## Use it in the local CLI
 

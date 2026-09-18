@@ -11,7 +11,7 @@ configure its required services, start it, and verify that it is working.
 
 <div class="option-gallery option-gallery--courses">
 
-<a class="option-card option-card--compact" href="../getting-started/">
+<a class="option-card option-card--compact" href="data8/getting-started/">
   <div class="option-card__body">
     <div class="option-card__heading">
       <img class="option-card__logo" src="../assets/gallery/data8.jpg" alt="">
