@@ -371,92 +371,94 @@
   color: var(--md-default-fg-color--light);
 }
 
+/* Process rail: stations read straight down a single line, so the order of the
+   steps is the order of the page. */
 .outline-grid {
+  --flow-rail: #2866cc;
+  --flow-node-ink: var(--lab-ink);
+  --flow-origin-bg: var(--lab-ink);
+  --flow-origin-ink: #ffffff;
+  --flow-trace: var(--lab-ink);
+
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: 1fr;
-  gap: 1.6rem 2.2rem;
-  max-width: 48rem;
-  margin: 1.5rem 0 2rem;
+  max-width: 34rem;
+  margin: 1.75rem 0 2.25rem;
   counter-reset: outline-step;
 }
 
+[data-md-color-scheme="slate"] .outline-grid {
+  --flow-rail: var(--lab-rule);
+  --flow-node-ink: var(--lab-rule);
+  --flow-origin-bg: var(--lab-ink-soft);
+  --flow-origin-ink: var(--lab-signal);
+  --flow-trace: var(--lab-signal);
+}
+
 .outline-card {
-  display: flex;
-  min-height: 12rem;
-  min-width: 0;
-  height: 100%;
+  display: grid;
   position: relative;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding: 0.85rem 0.9rem 1rem;
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-top: 0.2rem solid var(--lab-signal);
-  background: var(--md-code-bg-color);
-  box-shadow: 0 0.2rem 0.75rem rgb(0 38 118 / 7%);
+  grid-template-columns: 3.2rem 1fr;
+  column-gap: 1.15rem;
+  padding-bottom: 1.9rem;
   counter-increment: outline-step;
 }
 
-.outline-card:nth-child(3) {
-  grid-column: 2;
-  grid-row: 2;
+.outline-card:last-child {
+  padding-bottom: 0;
 }
 
-.outline-card:nth-child(4) {
-  grid-column: 1;
-  grid-row: 2;
-}
-
+/* Rail segment, running from this station down to the next one. */
 .outline-card::before {
-  content: "0" counter(outline-step);
+  content: "";
   position: absolute;
-  top: 0.7rem;
-  right: 0.8rem;
-  color: var(--md-default-fg-color--lighter);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  top: 1.6rem;
+  bottom: 0;
+  left: 1.53rem;
+  width: 0.14rem;
+  background: var(--flow-rail);
+  opacity: 0.6;
 }
 
-.outline-card::after {
-  position: absolute;
-  z-index: 2;
-  color: var(--lab-ink);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1;
+.outline-card:last-child::before {
+  content: none;
 }
 
-.outline-card:nth-child(1)::after {
-  content: "\2192";
-  top: calc(50% - 0.8rem);
-  right: -1.9rem;
+.outline-card > * {
+  grid-column: 2;
+  min-width: 0;
 }
 
-.outline-card:nth-child(2)::after {
-  content: "\2193";
-  right: calc(50% - 0.5rem);
-  bottom: -1.65rem;
-}
-
-.outline-card:nth-child(3)::after {
-  content: "\2190";
-  top: calc(50% - 0.8rem);
-  left: -1.9rem;
+.outline-card > p:first-child {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: start;
+  margin: 0;
 }
 
 .outline-card .outline-card__icon {
-  display: inline-grid;
-  width: 3.4rem;
-  height: 3.4rem;
-  margin-bottom: 0.6rem;
-  padding: 0.5rem;
+  display: grid;
+  position: relative;
+  z-index: 1;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 0.62rem;
   place-items: center;
-  color: var(--lab-ink);
-  border: 0.2rem solid #2866cc;
+  color: var(--flow-node-ink);
+  border: 0.14rem solid var(--flow-rail);
   background: var(--md-default-bg-color);
+  transition: border-color 180ms ease;
+}
+
+.outline-card:hover .outline-card__icon,
+.outline-card:focus-within .outline-card__icon {
+  border-color: var(--lab-signal);
+}
+
+/* The source of the flow, marked once. */
+.outline-card:first-child .outline-card__icon {
+  color: var(--flow-origin-ink);
+  border-color: var(--flow-origin-bg);
+  background: var(--flow-origin-bg);
 }
 
 .outline-card .outline-card__icon svg {
@@ -466,26 +468,68 @@
 }
 
 .outline-card h3 {
-  margin: 0 0 0.45rem;
+  margin: 0.15rem 0 0.4rem;
   color: var(--md-default-fg-color);
-  font-size: 0.92rem;
-  line-height: 1.25;
+  font-size: 0.98rem;
+  line-height: 1.3;
+}
+
+.outline-card h3::before {
+  content: counter(outline-step, decimal-leading-zero);
+  margin-right: 0.55rem;
+  color: var(--flow-rail);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
 .outline-card p {
   margin: 0;
   color: var(--md-default-fg-color--light);
-  font-size: 0.78rem;
-  line-height: 1.55;
+  font-size: 0.82rem;
+  line-height: 1.6;
 }
 
-[data-md-color-scheme="slate"] .outline-card .outline-card__icon {
-  color: var(--lab-signal);
-  border-color: var(--lab-rule);
+.outline-card p + p {
+  margin-top: 0.55rem;
 }
 
-[data-md-color-scheme="slate"] .outline-card::after {
-  color: var(--lab-signal);
+/* Scrolled through, the rail draws itself station by station, so the direction
+   of the pipeline is shown rather than labelled. Each station times its own
+   segment off its own position, so this holds for any number of steps.
+   Browsers without scroll-driven animation, and readers who ask for less
+   motion, get the finished diagram. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .outline-card::after {
+      content: "";
+      position: absolute;
+      top: 1.6rem;
+      bottom: 0;
+      left: 1.53rem;
+      width: 0.14rem;
+      background: var(--flow-trace);
+      transform: scaleY(0);
+      transform-origin: top center;
+      animation-name: outline-trace;
+      animation-duration: auto;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: cover 32% cover 58%;
+    }
+
+    .outline-card:last-child::after {
+      content: none;
+    }
+  }
+}
+
+@keyframes outline-trace {
+  to {
+    transform: scaleY(1);
+  }
 }
 
 @media screen and (max-width: 44.9844em) {
@@ -500,31 +544,21 @@
     text-align: center;
   }
 
-  .outline-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    gap: 2rem;
+  /* Smaller stations on a phone, so the step text keeps a usable measure. */
+  .outline-card {
+    grid-template-columns: 2.6rem 1fr;
+    column-gap: 0.9rem;
   }
 
-  .outline-card:nth-child(3),
-  .outline-card:nth-child(4) {
-    grid-column: auto;
-    grid-row: auto;
+  .outline-card .outline-card__icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    padding: 0.5rem;
   }
 
-  .outline-card:nth-child(1)::after,
-  .outline-card:nth-child(2)::after,
-  .outline-card:nth-child(3)::after {
-    content: "\2193";
-    top: auto;
-    right: calc(50% - 0.5rem);
-    bottom: -1.75rem;
-    left: auto;
-  }
-}
-
-@media screen and (min-width: 45em) and (max-width: 76.2344em) {
-  .outline-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .outline-card::before,
+  .outline-card::after {
+    top: 1.3rem;
+    left: 1.23rem;
   }
 }

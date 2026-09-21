@@ -5,7 +5,7 @@ starting the local, Discord, or Slack tutor option.
 
 ## Current course
 
-![Data 8 course logo.](../../assets/gallery/data8.jpg){ .course-logo-large }
+![Data 8 course logo.](../../assets/gallery/data8.png){ .course-logo-large }
 
 The tutor is grounded in UC Berkeley Data 8 Spring 2026 lectures, assignments,
 textbook material, worksheets, and exams.

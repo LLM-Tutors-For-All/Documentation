@@ -14,7 +14,7 @@ configure its required services, start it, and verify that it is working.
 <a class="option-card option-card--compact" href="data8/getting-started/">
   <div class="option-card__body">
     <div class="option-card__heading">
-      <img class="option-card__logo" src="../assets/gallery/data8.jpg" alt="">
+      <img class="option-card__logo" src="../assets/gallery/data8.png" alt="">
       <h3>Data 8</h3>
     </div>
     <p>Set up a tutor grounded in UC Berkeley Data 8 Spring 2026 course material.</p>
