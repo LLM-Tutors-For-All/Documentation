@@ -18,12 +18,12 @@ approaches, and model providers in controlled combinations.
 
 ## Data 8 brain
 
-The current Data 8 tutor combines two brain components:
+The current Data 8 tutor combines these two components:
 
 - **[GPT Corpus](data8/corpus-options.md):** a local collection and search index
-  of Data 8 Spring 2026 course material
+  of Data 8 Spring 2026 course material acting as the knowledge base
 - **[OpenAI Brain](data8/openai-options.md):** an OpenAI-compatible model that
-  generates answers from retrieved course context
+  generates answers from retrieved course context acting as the brain
 
 Together they form the tutor's retrieval-augmented generation, or RAG,
 pipeline. Future course and model combinations can be added alongside Data 8

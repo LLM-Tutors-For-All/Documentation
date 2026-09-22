@@ -9,8 +9,8 @@ theme:
   font:
     text: IBM Plex Sans
     code: IBM Plex Mono
-  icon:
-    logo: material/robot
+  logo: assets/llm-tfa-logo.png
+  favicon: assets/llm-tfa-logo.png
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
