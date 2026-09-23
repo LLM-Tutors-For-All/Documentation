@@ -49,7 +49,9 @@ nav:
       - Data 8:
           - GPT Corpus: model-options/data8/corpus-options.md
           - OpenAI Brain: model-options/data8/openai-options.md
-  - Benchmark: benchmark.md
+  - Benchmarks:
+      - Overview: benchmark.md
+      - How Evaluation Works: benchmark/evaluation.md
   - Contact: contact.md
 
 plugins:
