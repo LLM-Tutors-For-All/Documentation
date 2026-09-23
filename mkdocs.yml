@@ -27,6 +27,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
+    - content.code.copy
     - search.highlight
     - search.suggest
 
