@@ -12,7 +12,7 @@ links below.
 <div class="contact-grid">
 
 <article class="contact-card">
-  <img src="../assets/contributors/profile-placeholder.svg" alt="Profile picture placeholder">
+  <img src="../assets/contributors/benjamin-telanoff.png" alt="Benjamin Telanoff">
   <div>
     <h2>Benjamin Telanoff</h2>
     <p>Project contributor</p>
