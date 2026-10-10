@@ -37,8 +37,8 @@ question.
 
 ### Tutor brain
 
-The OpenAI-compatible model uses retrieved context to construct a focused
-answer.
+An OpenRouter model uses retrieved context to construct a focused answer. You
+can select a different supported model without changing the tutor code.
 </div>
 
 <div class="outline-card" markdown>
@@ -56,7 +56,7 @@ The same response engine supports the local CLI, Discord, and Slack bodies.
 - Python 3
 - A clone of the
   [LLM-Tutors-For-All repository](https://github.com/LLM-Tutors-For-All/LLM-Tutors-For-All)
-- An OpenAI API key for generated answers
+- An [OpenRouter](https://openrouter.ai/) API key for generated answers
 
 ## 1. Create the environment
 
@@ -82,15 +82,31 @@ Open a terminal in the project repository:
 
 ## 2. Configure the model
 
-Open `.env` and add your API key:
+Open `.env`, keep OpenRouter as the provider, and add your API key:
 
 ```dotenv
-OPENAI_API_KEY=your-api-key
-OPENAI_MODEL=gpt-4o-mini
+LLM_PROVIDER=openrouter
+OPENROUTER_API_KEY=your-api-key
+OPENROUTER_MODEL=openai/gpt-4o-mini
+OPENROUTER_APP_NAME=LLM Tutors For All
 ```
 
-`OPENAI_MODEL` is optional and defaults to `gpt-4o-mini`. The project also
-accepts `OPENAI_BASE_URL` for an OpenAI-compatible endpoint.
+`OPENROUTER_MODEL` selects the model used by the tutor. The default is
+`openai/gpt-4o-mini`, but it can be replaced with another model identifier from
+the [OpenRouter model directory](https://openrouter.ai/models).
+
+The following optional settings are also available:
+
+```dotenv
+# OPENROUTER_EMBEDDING_MODEL=openai/text-embedding-3-small
+# OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
+# OPENROUTER_SITE_URL=https://your-app.example
+```
+
+`OPENROUTER_SITE_URL` identifies your deployment to OpenRouter. OpenAI remains
+available as a fallback by setting `LLM_PROVIDER=openai` and configuring the
+`OPENAI_API_KEY`, `OPENAI_MODEL`, and optional OpenAI settings included in
+`.env.example`.
 
 !!! warning "Keep credentials private"
     Never commit `.env` or paste API and bot tokens into documentation, issues,
@@ -103,12 +119,15 @@ python -m tutor ingest
 python -m tutor status
 ```
 
-The default index uses local BM25 retrieval and does not call OpenAI. To add
-OpenAI embeddings and combine them with BM25 retrieval:
+The default index uses local BM25 retrieval and does not need an API key. To add
+provider-hosted embeddings and combine them with BM25 retrieval:
 
 ```bash
 python -m tutor ingest --embed
 ```
+
+When using OpenRouter, configure `OPENROUTER_EMBEDDING_MODEL` before running
+this command. The OpenAI fallback instead uses `OPENAI_EMBEDDING_MODEL`.
 
 Rebuild the index whenever course files in `gpt_corpus/` change.
 

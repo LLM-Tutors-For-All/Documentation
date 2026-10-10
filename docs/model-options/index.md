@@ -16,15 +16,19 @@ model that generates responses.
 Keeping them separate makes it possible to compare course corpora, retrieval
 approaches, and model providers in controlled combinations.
 
-## Data 8 brain
+## Data 8 options
 
-The current Data 8 tutor combines these two components:
+The Data 8 tutor combines its course corpus with one configured model provider:
 
 - **[GPT Corpus](data8/corpus-options.md):** a local collection and search index
   of Data 8 Spring 2026 course material acting as the knowledge base
-- **[OpenAI Brain](data8/openai-options.md):** an OpenAI-compatible model that
-  generates answers from retrieved course context acting as the brain
+- **[OpenRouter Brain](data8/openrouter-options.md):** a selectable model
+  accessed through OpenRouter that generates answers from retrieved course
+  context; this is the recommended provider
+- **[OpenAI Brain](data8/openai-options.md):** direct access to an OpenAI model,
+  retained as an alternative provider
 
-Together they form the tutor's retrieval-augmented generation, or RAG,
-pipeline. Future course and model combinations can be added alongside Data 8
-without restructuring the documentation.
+The corpus and selected brain form the tutor's retrieval-augmented generation,
+or RAG, pipeline. OpenRouter lets the same tutor compare or adopt models from
+different developers, while the OpenAI option documents the direct-provider
+configuration.

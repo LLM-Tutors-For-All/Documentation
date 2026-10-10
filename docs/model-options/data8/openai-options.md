@@ -1,7 +1,8 @@
 # Data 8 OpenAI Brain
 
-The current Data 8 tutor uses an OpenAI-compatible Chat Completions API to
-generate responses from retrieved course context. Its default model is
+The Data 8 tutor supports direct OpenAI access as an alternative to the
+recommended OpenRouter provider. It uses the OpenAI Chat Completions API to
+generate responses from retrieved course context. Its default OpenAI model is
 `gpt-4o-mini`.
 
 ## Configuration
@@ -11,6 +12,7 @@ Create a key on the
 project's `.env` file:
 
 ```dotenv
+LLM_PROVIDER=openai
 OPENAI_API_KEY=your-api-key
 OPENAI_MODEL=gpt-4o-mini
 ```

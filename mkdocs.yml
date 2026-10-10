@@ -32,7 +32,7 @@ theme:
     - search.suggest
 
 nav:
-  - Home: home.md
+  - Home: index.md
   - How to Use Our Bots:
       - Overview: how-to-use-our-bots/index.md
       - Current Bots:
@@ -48,6 +48,7 @@ nav:
       - Overview: model-options/index.md
       - Data 8:
           - GPT Corpus: model-options/data8/corpus-options.md
+          - OpenRouter Brain: model-options/data8/openrouter-options.md
           - OpenAI Brain: model-options/data8/openai-options.md
   - Benchmarks:
       - Overview: benchmark.md

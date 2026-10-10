@@ -40,4 +40,5 @@ interface uses the same course corpus, retrieval system, and tutoring engine.
 </div>
 
 All three tutor options currently use the same Data 8 course corpus and
-OpenAI-compatible brain.
+OpenRouter brain. The configured OpenRouter model can be changed without
+changing the interface or retrieval pipeline.

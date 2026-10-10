@@ -40,8 +40,10 @@ The default index:
 python -m tutor ingest --embed
 ```
 
-This embeds the corpus with OpenAI's `text-embedding-3-small`. Each question is
-also embedded, and its semantic ranking is combined with BM25.
+This embeds the corpus with the embedding model configured for the selected
+provider. With the recommended OpenRouter setup, set
+`OPENROUTER_EMBEDDING_MODEL` before running the command. Each question is also
+embedded, and its semantic ranking is combined with BM25.
 
 Embedding-assisted retrieval can find conceptually similar passages when the
 question and course material use different words. It also adds an initial
@@ -70,7 +72,7 @@ The corpus and RAG are not alternatives:
 
 1. The **corpus** stores the course knowledge.
 2. **Retrieval** selects relevant chunks using BM25 and optional embeddings.
-3. The **OpenAI brain** generates an answer from those chunks.
+3. The configured **OpenRouter model** generates an answer from those chunks.
 4. The complete retrieve-then-generate process is **RAG**.
 
 The default setup is still RAG even though its corpus and BM25 index are local.
