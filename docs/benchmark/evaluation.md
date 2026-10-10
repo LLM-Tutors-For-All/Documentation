@@ -29,6 +29,8 @@ source.
 The initial rubric follows the eight dimensions used by
 [MRBench](https://aclanthology.org/2025.naacl-long.57/):
 
+<div class="benchmark-grid benchmark-grid--dimensions" markdown>
+
 - **Mistake identification:** Did the tutor recognize an error?
 - **Mistake location:** Did it accurately point to where the error occurred?
 - **Answer revealing:** Did it avoid giving away the final answer?
@@ -37,6 +39,8 @@ The initial rubric follows the eight dimensions used by
 - **Coherence:** Does the response fit the preceding conversation?
 - **Tone:** Is the response encouraging, neutral, or offensive?
 - **Human-likeness:** Does the response sound natural rather than robotic?
+
+</div>
 
 The categorical labels and their distributions remain part of the report.
 Numeric summaries are useful for comparison, but they do not replace the
@@ -47,12 +51,16 @@ underlying rubric.
 No single automated judge is assumed to be correct. The platform supports
 several complementary approaches:
 
+<div class="method-list" markdown>
+
 - **Rubric judging** scores one response across the pedagogical dimensions.
 - **Cross-provider juries** combine judges from different model vendors.
 - **Pairwise judging** compares two responses in both presentation orders.
 - **Human ratings** provide an external reference for automated judges.
 - **Calibration datasets** test judges against existing expert labels from
   MRBench and the BEA 2025 shared task.
+
+</div>
 
 Judge quality is measured with agreement statistics such as Cohen's kappa, not
 only raw agreement. Pairwise comparisons swap response order to expose position
@@ -64,6 +72,8 @@ its own provider.
 The methodology includes safeguards intended to prevent a clean-looking
 leaderboard from hiding unstable results:
 
+<div class="method-list" markdown>
+
 - run each item multiple times and retain raw responses
 - pin model versions and record generation settings where providers allow it
 - keep reference answers away from the tutor while making them available to
@@ -72,6 +82,8 @@ leaderboard from hiding unstable results:
 - use clustered bootstrap confidence intervals for repeated conversations
 - report latency separately as median and 95th percentile
 - publish judge parsing failures, pairwise inconsistencies, and excluded runs
+
+</div>
 
 Latency reflects a service at a particular time, not only the model itself.
 Likewise, automated pedagogical scores are meaningful only when the judge has

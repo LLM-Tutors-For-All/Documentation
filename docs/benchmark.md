@@ -20,12 +20,16 @@ tradeoffs among teaching quality, cost, speed, and deployment constraints.
 
 The project studies questions such as:
 
+<div class="benchmark-grid" markdown>
+
 - Does the tutor identify the learner's mistake and locate it accurately?
 - Does it provide correct, relevant, and actionable guidance?
 - Does it guide the learner without revealing the final answer?
 - Is its response coherent, natural, and appropriately encouraging?
 - How much does each response cost, and how quickly is it produced?
 - Do conclusions remain stable across repeated runs and different evaluators?
+
+</div>
 
 These questions are evaluated separately. A model that is inexpensive or fast
 may not be the strongest pedagogical choice, while a high-quality response may
@@ -64,6 +68,8 @@ rescored without generating them again.
 
 Reports are designed to include:
 
+<div class="benchmark-grid benchmark-grid--outputs" markdown>
+
 - pedagogical quality by evaluation dimension
 - answer-leakage and response-length checks
 - agreement between automated judges and human labels
@@ -71,6 +77,8 @@ Reports are designed to include:
 - median and 95th-percentile latency
 - token usage and estimated cost
 - uncertainty intervals across repeated samples
+
+</div>
 
 Read [How evaluation works](benchmark/evaluation.md) for the scoring process,
 reliability safeguards, and current development status.

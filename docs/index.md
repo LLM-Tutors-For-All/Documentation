@@ -7,6 +7,8 @@ hide:
 
 <section class="project-hero" markdown>
 
+<div class="project-hero__copy" markdown>
+
 # LLM Tutors For All
 
 An applied research and discovery project exploring practical ways to deploy
@@ -14,8 +16,12 @@ LLM-powered tutors, with a focus on performance and cost tradeoffs across
 services. We are developing reproducible benchmark harnesses to test tutor
 models under consistent conditions.
 
+<div class="project-hero__actions" markdown>
 [Explore tutor options](tutor-options/index.md){ .md-button .md-button--primary }
 [View benchmarks](benchmark.md){ .md-button }
+</div>
+
+</div>
 
 </section>
 
@@ -28,6 +34,10 @@ on where learners work, how quickly and reliably the tutor responds, and what
 it costs to operate. LLM Tutors For All treats each implementation as both a
 usable tutor and a research case study. The goal is to document working
 deployment patterns and compare them through practical, repeatable benchmarks.
+
+<div class="project-details__grid" markdown>
+
+<div class="project-details__section" markdown>
 
 ### What we currently use
 
@@ -42,6 +52,10 @@ Using one tutoring engine across these interfaces lets the project study how
 the surrounding service and deployment choice affects latency, reliability,
 API usage, operating cost, and the learner experience.
 
+</div>
+
+<div class="project-details__section" markdown>
+
 ### Research direction
 
 The current Data 8 GPT corpus and OpenRouter brain are the first framework
@@ -54,5 +68,9 @@ than assume that one approach is universally best. Results will include the
 methodology, harness configuration, test questions, and measured data as
 experiments are completed. This makes model comparisons repeatable instead of
 depending on isolated demonstrations or impressions.
+
+</div>
+
+</div>
 
 </section>

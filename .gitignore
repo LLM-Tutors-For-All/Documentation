@@ -1,4 +1,6 @@
 .venv/
 site/
+.impeccable/build-site/
+.impeccable/review/
 __pycache__/
 .env
