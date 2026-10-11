@@ -1,0 +1,990 @@
+:root {
+  --lab-ink: #002676;
+  --lab-ink-soft: #143f8f;
+  --lab-signal: #fdb515;
+  --lab-rule: #9fd1ff;
+  --lab-paper: #f5f7fb;
+  --lab-surface: #ffffff;
+  --lab-text: #17243f;
+  --lab-muted: #52627a;
+  --lab-radius: 0.6rem;
+  --lab-shadow: 0 0.75rem 2rem rgb(0 38 118 / 10%);
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--lab-ink);
+  --md-accent-fg-color: #002676;
+  --md-default-bg-color: var(--lab-paper);
+  --md-default-fg-color: var(--lab-text);
+  --md-default-fg-color--light: var(--lab-muted);
+  --md-code-bg-color: #eaf0f8;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #00194f;
+  --md-accent-fg-color: var(--lab-signal);
+  --md-default-bg-color: #0b1530;
+  --md-code-bg-color: #111f3f;
+  --lab-surface: #101d38;
+  --lab-text: #edf3ff;
+  --lab-muted: #b4c2dc;
+  --lab-shadow: 0 0.75rem 2rem rgb(0 0 0 / 22%);
+}
+
+::selection {
+  color: var(--lab-ink);
+  background: var(--lab-signal);
+}
+
+html {
+  scrollbar-color: var(--lab-rule) var(--md-default-bg-color);
+  scrollbar-width: thin;
+}
+
+.md-grid {
+  max-width: 82rem;
+}
+
+.md-main__inner {
+  margin-top: 1.8rem;
+}
+
+.md-content {
+  min-width: 0;
+}
+
+.md-typeset {
+  color: var(--md-default-fg-color);
+  font-size: 0.82rem;
+  line-height: 1.72;
+}
+
+.md-typeset > :where(p, ul, ol),
+.md-typeset section > :where(p, ul, ol) {
+  max-width: 72ch;
+}
+
+.md-typeset a:not(.md-button, .option-card, .audience-path, .headerlink) {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.md-typeset :focus-visible {
+  outline: 0.15rem solid var(--lab-signal);
+  outline-offset: 0.18rem;
+}
+
+.md-header,
+.md-tabs {
+  background-color: var(--lab-ink);
+}
+
+.md-header {
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+  box-shadow: 0 0.35rem 1.2rem rgb(0 20 70 / 18%);
+}
+
+.md-header__inner {
+  min-height: 3.2rem;
+}
+
+.md-header__title {
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+.md-header__button.md-logo {
+  margin: 0 0.55rem 0 0;
+  padding: 0.28rem;
+}
+
+.md-header__button.md-logo img {
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 0.35rem;
+}
+
+.md-tabs {
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+}
+
+.md-tabs__link {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  opacity: 0.78;
+  transition: color 150ms ease, opacity 150ms ease;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--lab-signal);
+  opacity: 1;
+}
+
+.md-content h1,
+.md-content h2 {
+  color: var(--md-default-fg-color);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+
+.md-typeset h1 {
+  max-width: 20ch;
+  margin-bottom: 1.2rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.04;
+}
+
+.md-typeset h2 {
+  margin-top: 2.8rem;
+  margin-bottom: 0.85rem;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.md-typeset h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+.md-typeset .md-button {
+  min-height: 2.55rem;
+  padding: 0.62rem 1rem;
+  border-width: 1px;
+  border-radius: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.md-typeset .md-button:hover {
+  transform: translateY(-0.08rem);
+}
+
+.guide-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.25rem 0;
+}
+
+.guide-actions .md-button {
+  margin: 0;
+}
+
+.project-hero,
+.project-details {
+  padding: clamp(1.5rem, 4vw, 3.25rem);
+}
+
+.project-hero {
+  display: grid;
+  position: relative;
+  margin: 0 0 clamp(2.5rem, 6vw, 4.5rem);
+  overflow: hidden;
+  border: 1px solid rgb(159 209 255 / 35%);
+  border-radius: var(--lab-radius);
+  color: #e9f2f8;
+  background-image:
+    linear-gradient(120deg, rgb(0 38 118 / 98%), rgb(20 63 143 / 94%)),
+    linear-gradient(rgb(255 255 255 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 5%) 1px, transparent 1px);
+  background-size: auto, 2rem 2rem, 2rem 2rem;
+  box-shadow: var(--lab-shadow);
+}
+
+.project-hero::before {
+  content: "";
+  position: absolute;
+  right: -5rem;
+  bottom: -7rem;
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid rgb(253 181 21 / 22%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3rem rgb(253 181 21 / 5%), 0 0 0 6rem rgb(253 181 21 / 3%);
+  pointer-events: none;
+}
+
+.project-hero__copy {
+  position: relative;
+  z-index: 1;
+  max-width: 48rem;
+}
+
+.project-hero h1 {
+  max-width: 13ch;
+  margin: 0 0 1rem;
+  color: #ffffff;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+}
+
+.project-hero__copy > p {
+  max-width: 40rem;
+  margin: 0;
+  color: #d5e3ed;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.65;
+}
+
+.project-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.4rem;
+}
+
+.project-hero__actions .md-button {
+  margin: 0;
+  color: #ffffff;
+  border-color: rgb(255 255 255 / 55%);
+}
+
+.project-hero .md-button:hover {
+  color: var(--lab-ink);
+  border-color: var(--lab-signal);
+  background: var(--lab-signal);
+}
+
+.project-hero .md-button--primary {
+  color: var(--lab-ink);
+  border-color: var(--lab-signal);
+  background: var(--lab-signal);
+}
+
+.project-details {
+  margin: 0 0 clamp(3rem, 7vw, 5.5rem);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: var(--lab-radius);
+  background: var(--lab-surface);
+  box-shadow: var(--lab-shadow);
+}
+
+.project-details h2:first-child {
+  margin-top: 0;
+}
+
+.project-details > p {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+}
+
+.project-details__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  margin-top: 2.25rem;
+}
+
+.project-details__section {
+  min-width: 0;
+  padding-top: 1.2rem;
+  border-top: 2px solid var(--lab-rule);
+}
+
+.project-details__section h3 {
+  margin-top: 0;
+  color: var(--md-accent-fg-color);
+}
+
+.md-content__inner > h1 + p {
+  max-width: 66ch;
+  margin-bottom: 2.2rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.md-nav__link {
+  line-height: 1.45;
+  transition: color 140ms ease;
+}
+
+.md-nav__link--active {
+  font-weight: 650;
+}
+
+.md-sidebar--secondary .md-nav {
+  border-left: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset pre > code {
+  line-height: 1.65;
+}
+
+.md-typeset .highlight {
+  margin: 1.2rem 0;
+}
+
+.md-typeset .concept-list > ul,
+.md-typeset .benchmark-grid > ul,
+.md-typeset .method-list > ul,
+.md-typeset .option-index > ul {
+  padding: 0;
+  list-style: none;
+}
+
+.md-typeset .concept-list > ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.concept-list li {
+  margin: 0;
+  padding: 1.1rem 0;
+  border-top: 2px solid var(--lab-rule);
+}
+
+.concept-list li strong {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .option-index > ul {
+  margin: 1.25rem 0 1.5rem;
+}
+
+.option-index li {
+  margin: 0;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.option-index li:last-child {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.option-index li strong {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .benchmark-grid > ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 1.4rem 0 1.75rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.benchmark-grid li {
+  position: relative;
+  margin: 0;
+  padding: 0.9rem 1.2rem 0.9rem 1.35rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.benchmark-grid li::before {
+  content: "";
+  position: absolute;
+  top: 1.38rem;
+  left: 0.2rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  background: var(--lab-signal);
+}
+
+.benchmark-grid--dimensions li strong {
+  display: block;
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .method-list > ul {
+  margin: 1.25rem 0 1.75rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.method-list li {
+  margin: 0;
+  padding: 0.72rem 0;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.method-list li strong {
+  color: var(--md-accent-fg-color);
+}
+
+.contributors ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.contributors li {
+  padding: 0.9rem 1rem;
+  border-top: 2px solid var(--md-accent-fg-color);
+  background: var(--md-default-bg-color);
+}
+
+.contact-hero {
+  margin: 0 0 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  color: #ffffff;
+  border-bottom: 0.2rem solid var(--lab-signal);
+  background:
+    linear-gradient(105deg, var(--lab-ink) 0%, var(--lab-ink-soft) 72%, #3b7ea1 100%);
+}
+
+.contact-hero h1 {
+  margin: 0 0 0.35rem;
+  color: #ffffff;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+}
+
+.contact-hero p {
+  max-width: 38rem;
+  margin: 0;
+  color: #e7f1ff;
+  font-size: 0.95rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.75rem 1.25rem;
+  margin: 2rem 0 3rem;
+}
+
+.contact-card {
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact-card > img {
+  display: block;
+  width: min(8.5rem, 82%);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border: 0.12rem solid var(--lab-signal);
+  border-radius: 50%;
+  background: var(--lab-ink);
+}
+
+.contact-card > div {
+  display: grid;
+  grid-template-rows: 1.55rem 1.15rem 1.5rem;
+  padding: 0.25rem 0.2rem 0;
+}
+
+.contact-card h2 {
+  display: grid;
+  align-items: center;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.contact-card p {
+  display: grid;
+  align-items: center;
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.contact-card > div > p:not(.contact-links) {
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+.contact-card .contact-links {
+  display: flex;
+  min-height: 1.5rem;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 0.1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.63rem !important;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.contact-links a {
+  display: inline-block;
+  width: 1.35rem;
+  height: 1.35rem;
+  overflow: hidden;
+  color: var(--md-accent-fg-color);
+  font-size: 0;
+  text-decoration: none;
+  background-color: currentcolor;
+  transition: transform 140ms ease;
+}
+
+.contact-links a:hover {
+  transform: translateY(-0.12rem);
+}
+
+.contact-links a[href*="github.com"] {
+  -webkit-mask: url("../assets/social/github.svg") center / contain no-repeat;
+  mask: url("../assets/social/github.svg") center / contain no-repeat;
+}
+
+.contact-links a[href*="linkedin.com"] {
+  -webkit-mask: url("../assets/social/linkedin.svg") center / contain no-repeat;
+  mask: url("../assets/social/linkedin.svg") center / contain no-repeat;
+}
+
+.contact-links--pending {
+  color: var(--md-default-fg-color--lighter) !important;
+  letter-spacing: 0.04em;
+}
+
+.md-content img[src$=".svg"] {
+  display: block;
+  width: 100%;
+  margin: 1.5rem 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.25rem;
+  background: #f8fafc;
+}
+
+.md-content .contact-card > img {
+  width: min(8.5rem, 82%);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  object-fit: cover;
+  border: 0.12rem solid var(--lab-signal);
+  border-radius: 50%;
+  background: var(--lab-ink);
+}
+
+.md-content .course-logo-large,
+.md-content .interface-logo-large {
+  display: block;
+  width: min(12rem, 55%);
+  margin: 1.5rem 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: #ffffff;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  overflow: hidden;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.35rem 1rem rgb(0 38 118 / 7%);
+}
+
+.md-typeset code {
+  border-radius: 0.25rem;
+}
+
+.option-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1.4rem;
+  margin: 1.75rem 0 2rem;
+}
+
+.option-gallery--courses {
+  grid-template-columns: minmax(16rem, 32rem);
+}
+
+.option-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--md-default-fg-color) !important;
+  text-decoration: none;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  background: var(--lab-surface);
+  box-shadow: 0 0.5rem 1.5rem rgb(0 38 118 / 8%);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.option-card:hover,
+.option-card:focus-visible {
+  color: var(--md-default-fg-color) !important;
+  border-color: color-mix(in srgb, var(--md-accent-fg-color) 42%, transparent);
+  box-shadow: 0 0.85rem 2rem rgb(0 38 118 / 14%);
+  transform: translateY(-0.18rem);
+}
+
+.option-card:focus-visible {
+  outline: 0.15rem solid var(--md-accent-fg-color);
+  outline-offset: 0.2rem;
+}
+
+.option-card__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 12 / 7;
+  background: var(--lab-ink);
+}
+
+.md-content .option-card__media img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0;
+  transition: transform 300ms ease;
+}
+
+.option-card:hover .option-card__media img {
+  transform: scale(1.025);
+}
+
+.option-card__media > span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.35rem 0.65rem;
+  color: var(--lab-ink);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--lab-signal);
+}
+
+.option-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.1rem 1.2rem 1.25rem;
+}
+
+.option-card__body h3 {
+  margin: 0.15rem 0 0.55rem;
+  color: var(--md-default-fg-color);
+  font-size: 1.25rem;
+}
+
+.option-card__body p {
+  margin: 0 0 1rem;
+  line-height: 1.55;
+}
+
+.option-card__body strong {
+  margin-top: auto;
+  color: var(--md-accent-fg-color);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.option-card__eyebrow {
+  color: var(--md-default-fg-color--light) !important;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.option-card--compact .option-card__body {
+  padding: 1.2rem;
+}
+
+.option-card--compact .option-card__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-content .option-card--compact .option-card__logo {
+  width: 3.1rem;
+  height: 3.1rem;
+  flex: 0 0 3.1rem;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.option-card__monogram {
+  display: grid;
+  width: 3.1rem;
+  height: 3.1rem;
+  flex: 0 0 3.1rem;
+  place-items: center;
+  color: #ffffff;
+  border-radius: 50%;
+  background: #111111;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.md-content .option-card--compact .option-card__logo[src$="slack.png"] {
+  padding: 0.35rem;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.option-card--compact .option-card__heading h3 {
+  margin: 0;
+  color: var(--md-accent-fg-color);
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.option-card--compact .option-card__body > p {
+  margin: 1rem 0 0;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Process rail: stations read straight down a single line, so the order of the
+   steps is the order of the page. */
+.outline-grid {
+  --flow-rail: #2866cc;
+  --flow-node-ink: var(--lab-ink);
+  --flow-origin-bg: var(--lab-ink);
+  --flow-origin-ink: #ffffff;
+  --flow-trace: var(--lab-ink);
+
+  display: grid;
+  max-width: 34rem;
+  margin: 1.75rem 0 2.25rem;
+  counter-reset: outline-step;
+}
+
+[data-md-color-scheme="slate"] .outline-grid {
+  --flow-rail: var(--lab-rule);
+  --flow-node-ink: var(--lab-rule);
+  --flow-origin-bg: var(--lab-ink-soft);
+  --flow-origin-ink: var(--lab-signal);
+  --flow-trace: var(--lab-signal);
+}
+
+.outline-card {
+  display: grid;
+  position: relative;
+  grid-template-columns: 3.2rem 1fr;
+  column-gap: 1.15rem;
+  padding-bottom: 1.9rem;
+  counter-increment: outline-step;
+}
+
+.outline-card:last-child {
+  padding-bottom: 0;
+}
+
+/* Rail segment, running from this station down to the next one. */
+.outline-card::before {
+  content: "";
+  position: absolute;
+  top: 1.6rem;
+  bottom: 0;
+  left: 1.53rem;
+  width: 0.14rem;
+  background: var(--flow-rail);
+  opacity: 0.6;
+}
+
+.outline-card:last-child::before {
+  content: none;
+}
+
+.outline-card > * {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.outline-card > p:first-child {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: start;
+  margin: 0;
+}
+
+.outline-card .outline-card__icon {
+  display: grid;
+  position: relative;
+  z-index: 1;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 0.62rem;
+  place-items: center;
+  color: var(--flow-node-ink);
+  border: 0.14rem solid var(--flow-rail);
+  background: var(--md-default-bg-color);
+  transition: border-color 180ms ease;
+}
+
+.outline-card:hover .outline-card__icon,
+.outline-card:focus-within .outline-card__icon {
+  border-color: var(--lab-signal);
+}
+
+/* The source of the flow, marked once. */
+.outline-card:first-child .outline-card__icon {
+  color: var(--flow-origin-ink);
+  border-color: var(--flow-origin-bg);
+  background: var(--flow-origin-bg);
+}
+
+.outline-card .outline-card__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentcolor;
+}
+
+.outline-card h3 {
+  margin: 0.15rem 0 0.4rem;
+  color: var(--md-default-fg-color);
+  font-size: 0.98rem;
+  line-height: 1.3;
+}
+
+.outline-card h3::before {
+  content: counter(outline-step, decimal-leading-zero);
+  margin-right: 0.55rem;
+  color: var(--flow-rail);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.outline-card p {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.outline-card p + p {
+  margin-top: 0.55rem;
+}
+
+/* Scrolled through, the rail draws itself station by station, so the direction
+   of the pipeline is shown rather than labelled. Each station times its own
+   segment off its own position, so this holds for any number of steps.
+   Browsers without scroll-driven animation, and readers who ask for less
+   motion, get the finished diagram. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .outline-card::after {
+      content: "";
+      position: absolute;
+      top: 1.6rem;
+      bottom: 0;
+      left: 1.53rem;
+      width: 0.14rem;
+      background: var(--flow-trace);
+      transform: scaleY(0);
+      transform-origin: top center;
+      animation-name: outline-trace;
+      animation-duration: auto;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: cover 32% cover 58%;
+    }
+
+    .outline-card:last-child::after {
+      content: none;
+    }
+  }
+}
+
+@keyframes outline-trace {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@media screen and (max-width: 44.9844em) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-right: 0;
+    padding: 1.5rem;
+    box-shadow: var(--lab-shadow);
+  }
+
+  .project-hero h1 {
+    max-width: 12ch;
+    font-size: clamp(2.35rem, 12vw, 3.25rem);
+  }
+
+  .project-hero__actions {
+    display: grid;
+  }
+
+  .guide-actions {
+    display: grid;
+  }
+
+  .guide-actions .md-button {
+    text-align: center;
+  }
+
+  .project-hero .md-button {
+    display: block;
+    text-align: center;
+  }
+
+  .project-details__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .md-typeset .concept-list > ul,
+  .md-typeset .benchmark-grid > ul {
+    grid-template-columns: 1fr;
+  }
+
+  /* Smaller stations on a phone, so the step text keeps a usable measure. */
+  .outline-card {
+    grid-template-columns: 2.6rem 1fr;
+    column-gap: 0.9rem;
+  }
+
+  .outline-card .outline-card__icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    padding: 0.5rem;
+  }
+
+  .outline-card::before,
+  .outline-card::after {
+    top: 1.3rem;
+    left: 1.23rem;
+  }
+}
+
+@media screen and (min-width: 45em) and (max-width: 76.2344em) {
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

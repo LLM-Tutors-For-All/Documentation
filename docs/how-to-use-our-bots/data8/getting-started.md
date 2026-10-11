@@ -1,7 +1,9 @@
 # Data 8 Bot: Getting Started
 
-This guide prepares and runs the current Data 8 tutor. Complete it before
-starting the local, Discord, or Slack tutor option.
+This guide prepares and runs the self-hosted Data 8 tutor. Complete it before
+starting the local, Discord, or Slack option. The hosted
+[Grok Bot setup](../../tutor-options/interfaces/grok-bot.md) uses a separate
+course-archive import instead.
 
 ## Current course
 
@@ -46,7 +48,7 @@ can select a different supported model without changing the tutor code.
 
 ### Tutor interfaces
 
-The same response engine supports the local CLI, Discord, and Slack bodies.
+The same response engine supports the local CLI, Discord, and Slack bots.
 </div>
 
 </div>
@@ -148,4 +150,6 @@ python -m tutor ask "I'm stuck on using tbl.where"
 Continue with the
 [local interactive tutor](../../tutor-options/interfaces/local-cli.md), the
 [Discord integration](../../tutor-options/interfaces/discord.md), or the
-[Slack integration](../../tutor-options/interfaces/slack.md).
+[Slack integration](../../tutor-options/interfaces/slack.md). For a hosted
+alternative, follow the
+[Grok Bot tutor guide](../../tutor-options/interfaces/grok-bot.md).

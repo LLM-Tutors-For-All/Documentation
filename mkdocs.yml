@@ -44,6 +44,7 @@ nav:
           - Local CLI: tutor-options/interfaces/local-cli.md
           - Discord: tutor-options/interfaces/discord.md
           - Slack: tutor-options/interfaces/slack.md
+          - Grok Bot: tutor-options/interfaces/grok-bot.md
   - Model Options:
       - Overview: model-options/index.md
       - Data 8:

@@ -1,7 +1,9 @@
 # Tutor Options
 
-The project currently runs one Data 8 tutor through three interfaces. Each
-interface uses the same course corpus, retrieval system, and tutoring engine.
+The project offers one Data 8 tutor through three self-hosted interfaces and a
+Grok Bot template. The self-hosted options share the same course corpus,
+retrieval system, and tutoring engine; Grok Bot keeps its own corpus on a
+persistent cloud computer.
 
 ## Choose an interface
 
@@ -37,8 +39,19 @@ interface uses the same course corpus, retrieval system, and tutoring engine.
   </div>
 </a>
 
+<a class="option-card option-card--compact" href="interfaces/grok-bot/">
+  <div class="option-card__body">
+    <div class="option-card__heading">
+      <img class="option-card__logo" src="../assets/gallery/grok.jpg" alt="">
+      <h3>Grok Bot</h3>
+    </div>
+    <p>Add the tutor template, then store and index the Data 8 corpus on its cloud computer.</p>
+  </div>
+</a>
+
 </div>
 
-All three tutor options currently use the same Data 8 course corpus and
-OpenRouter brain. The configured OpenRouter model can be changed without
-changing the interface or retrieval pipeline.
+The local CLI, Discord, and Slack options currently use the same Data 8 course
+corpus and OpenRouter brain. The configured OpenRouter model can be changed
+without changing those interfaces or their retrieval pipeline. Grok Bot is a
+separate hosted option with its own plan, usage, storage, and privacy terms.

@@ -46,11 +46,13 @@ deployment patterns and compare them through practical, repeatable benchmarks.
 - **Retrieval:** a local BM25 index, with optional provider-hosted embeddings
 - **Model service:** OpenRouter, using `openai/gpt-4o-mini` by default and
   supporting other selectable models
-- **Interfaces:** a local command-line tutor, Discord, and Slack
+- **Interfaces:** a local command-line tutor, Discord, Slack, and a separately
+  hosted Grok Bot template
 
-Using one tutoring engine across these interfaces lets the project study how
-the surrounding service and deployment choice affects latency, reliability,
-API usage, operating cost, and the learner experience.
+The self-hosted interfaces use one tutoring engine, while Grok Bot keeps its
+own corpus on a cloud computer. Documenting both patterns lets the project
+study how service and deployment choices affect latency, reliability, usage,
+operating cost, and the learner experience.
 
 </div>
 
