@@ -2,8 +2,8 @@
 
 This guide prepares and runs the self-hosted Data 8 tutor. Complete it before
 starting the local, Discord, or Slack option. The hosted
-[Grok Bot setup](../../tutor-options/interfaces/grok-bot.md) uses a separate
-course-archive import instead.
+[Grok Bot setup](../../tutor-options/interfaces/grok-bot.md) uses a shared
+template that sets up the Spring 2026 materials on first use.
 
 ## Current course
 

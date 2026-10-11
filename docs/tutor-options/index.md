@@ -45,7 +45,7 @@ persistent cloud computer.
       <img class="option-card__logo" src="../assets/gallery/grok.jpg" alt="">
       <h3>Grok Bot</h3>
     </div>
-    <p>Add the tutor template, then store and index the Data 8 corpus on its cloud computer.</p>
+    <p>Add the hosted template. On first use it sets up the Spring 2026 materials on its own.</p>
   </div>
 </a>
 
