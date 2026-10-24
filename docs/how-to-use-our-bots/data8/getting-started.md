@@ -1,9 +1,10 @@
 # Data 8 Bot: Getting Started
 
 This guide prepares and runs the self-hosted Data 8 tutor. Complete it before
-starting the local, Discord, or Slack option. The hosted
-[Grok Bot setup](../../tutor-options/interfaces/grok-bot.md) uses a shared
-template that sets up the Spring 2026 materials on first use.
+starting the local, Discord, or Slack option. Hosted alternatives are
+documented under [Persistent AIs](../../persistent-ais/index.md):
+[Grok Bot](../../persistent-ais/grok-bot.md) and
+[Muse](../../persistent-ais/muse.md).
 
 ## Current course
 
@@ -152,4 +153,5 @@ Continue with the
 [Discord integration](../../tutor-options/interfaces/discord.md), or the
 [Slack integration](../../tutor-options/interfaces/slack.md). For a hosted
 alternative, follow the
-[Grok Bot tutor guide](../../tutor-options/interfaces/grok-bot.md).
+[Grok Bot](../../persistent-ais/grok-bot.md) or
+[Muse](../../persistent-ais/muse.md) guide.

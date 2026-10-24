@@ -1,9 +1,11 @@
 # Tutor Options
 
-The project offers one Data 8 tutor through three self-hosted interfaces and a
-Grok Bot template. The self-hosted options share the same course corpus,
-retrieval system, and tutoring engine; Grok Bot keeps its own corpus on a
-persistent cloud computer.
+The project currently runs one Data 8 tutor through three self-hosted
+interfaces. Each interface uses the same course corpus, retrieval system,
+and tutoring engine.
+
+Hosted agents with their own cloud computers are documented separately
+under [Persistent AIs](../persistent-ais/index.md).
 
 ## Choose an interface
 
@@ -39,19 +41,8 @@ persistent cloud computer.
   </div>
 </a>
 
-<a class="option-card option-card--compact" href="interfaces/grok-bot/">
-  <div class="option-card__body">
-    <div class="option-card__heading">
-      <img class="option-card__logo" src="../assets/gallery/grok.jpg" alt="">
-      <h3>Grok Bot</h3>
-    </div>
-    <p>Add the hosted template. On first use it sets up the Spring 2026 materials on its own.</p>
-  </div>
-</a>
-
 </div>
 
-The local CLI, Discord, and Slack options currently use the same Data 8 course
-corpus and OpenRouter brain. The configured OpenRouter model can be changed
-without changing those interfaces or their retrieval pipeline. Grok Bot is a
-separate hosted option with its own plan, usage, storage, and privacy terms.
+All three tutor options currently use the same Data 8 course corpus and
+OpenRouter brain. The configured OpenRouter model can be changed without
+changing the interface or retrieval pipeline.

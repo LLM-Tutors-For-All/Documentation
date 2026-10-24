@@ -44,7 +44,10 @@ nav:
           - Local CLI: tutor-options/interfaces/local-cli.md
           - Discord: tutor-options/interfaces/discord.md
           - Slack: tutor-options/interfaces/slack.md
-          - Grok Bot: tutor-options/interfaces/grok-bot.md
+  - Persistent AIs:
+      - Overview: persistent-ais/index.md
+      - Grok Bot: persistent-ais/grok-bot.md
+      - Muse: persistent-ais/muse.md
   - Model Options:
       - Overview: model-options/index.md
       - Data 8:
@@ -54,6 +57,12 @@ nav:
   - Benchmarks:
       - Overview: benchmark.md
       - How Evaluation Works: benchmark/evaluation.md
+  - Tradeoffs:
+      - Overview: tradeoffs/index.md
+      - RAG: tradeoffs/rag.md
+      - LangChain and LangGraph: tradeoffs/langchain-langgraph.md
+      - vLLM: tradeoffs/vllm.md
+      - KV Caching: tradeoffs/kv-caching.md
   - Contact: contact.md
 
 plugins:

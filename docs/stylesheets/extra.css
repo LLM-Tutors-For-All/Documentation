@@ -726,6 +726,15 @@ html {
   background: #ffffff;
 }
 
+.md-content .option-card--compact .option-card__logo[src$="muse.svg"] {
+  background: #111111;
+}
+
+.guide-actions .md-button:not(.md-button--primary) {
+  color: var(--md-accent-fg-color);
+  border-color: currentcolor;
+}
+
 .option-card--compact .option-card__heading h3 {
   margin: 0;
   color: var(--md-accent-fg-color);

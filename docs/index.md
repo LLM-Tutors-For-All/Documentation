@@ -46,13 +46,13 @@ deployment patterns and compare them through practical, repeatable benchmarks.
 - **Retrieval:** a local BM25 index, with optional provider-hosted embeddings
 - **Model service:** OpenRouter, using `openai/gpt-4o-mini` by default and
   supporting other selectable models
-- **Interfaces:** a local command-line tutor, Discord, Slack, and a separately
-  hosted Grok Bot template
+- **Interfaces:** a local command-line tutor, Discord, and Slack
+- **Persistent AIs:** a Grok Bot template and a Muse side-chat tutor
 
-The self-hosted interfaces use one tutoring engine, while Grok Bot keeps its
-own corpus on a cloud computer. Documenting both patterns lets the project
-study how service and deployment choices affect latency, reliability, usage,
-operating cost, and the learner experience.
+The self-hosted interfaces use one tutoring engine. Persistent AIs keep the
+course corpus on a hosted cloud computer. Documenting both patterns lets the
+project study how service and deployment choices affect latency, reliability,
+usage, operating cost, and the learner experience.
 
 </div>
 
